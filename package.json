@@ -1,0 +1,23 @@
+{
+  "name": "potato-bot",
+  "version": "0.0.1",
+  "description": "it's definitely in beta bois ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songpark95/potato-bot.git"
+  },
+  "author": "song park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songpark95/potato-bot/issues"
+  },
+  "homepage": "https://github.com/songpark95/potato-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "eslint": "^7.7.0"
+  }
+}
