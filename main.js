@@ -11,7 +11,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     // setting a new item in the collection with the key as command name and value as exported module!
-    client.commands.set(command.name, comnmand);
+    client.commands.set(command.name, command);
 }
 
 
@@ -29,7 +29,11 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
     
-    if (command === 'server-info') {
+    if (command === 'ping') {
+		message.channel.send('Pong.');
+	} else if (command === 'beep') {
+		message.channel.send('Boop.');
+    } else if (command === 'server-info') {
         message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
     } else if(command === 'info') {
         if (!args.length) {
